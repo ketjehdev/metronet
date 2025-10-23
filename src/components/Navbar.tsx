@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Wifi } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,12 +24,10 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            {/* <div className="p-2 bg-gradient-primary rounded-lg group-hover:shadow-glow transition-all duration-300">
-              <Wifi className="h-6 w-6 text-primary-foreground" />
-            </div> */}
-            <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+            <img src={logo} width={200} alt="Logo" />
+            {/* <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
               Metronet
-            </span>
+            </span> */}
           </Link>
 
           {/* Desktop Navigation */}

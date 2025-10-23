@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Wifi, Mail, Phone, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
+import logo from '../assets/logo.png';
 
 const Footer = () => {
   return (
@@ -9,9 +10,10 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <span className="text-lg font-bold bg-gradient-primary bg-clip-text text-transparent">
+              <img src={logo} width={200} alt="Logo" />
+              {/* <span className="text-lg font-bold bg-gradient-primary bg-clip-text text-transparent">
                 Metronet
-              </span>
+              </span> */}
             </div>
             <p className="text-muted-foreground text-sm mb-4">
               Solusi internet cepat dan andal untuk rumah dan bisnis Anda. Koneksi fiber optik
