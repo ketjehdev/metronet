@@ -1,0 +1,337 @@
+import { Home, Building2, Server, Globe, Shield, Headphones, Zap } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import ServiceCard from "@/components/ServiceCard";
+
+const Services = () => {
+  return (
+    <div className="min-h-screen">
+      <Navbar />
+
+      {/* Hero Section */}
+      <section className="pt-16 bg-gradient-hero">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
+            Layanan Kami
+          </h1>
+          <p className="text-xl text-primary-foreground/90 max-w-2xl">
+            Pilihan paket internet yang sesuai dengan kebutuhan rumah dan bisnis Anda
+          </p>
+        </div>
+      </section>
+
+      {/* Home Internet Packages */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Paket Internet Rumah</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Koneksi fiber optik untuk streaming, gaming, dan kerja dari rumah
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <ServiceCard
+              icon={Home}
+              title="Paket Starter"
+              description="Cocok untuk browsing dan streaming HD"
+              speed="30 Mbps"
+              price="Rp 250.000"
+              features={[
+                "Kecepatan hingga 30 Mbps",
+                "Unlimited kuota",
+                "WiFi router gratis",
+                "Support 24/7",
+                "Free instalasi",
+              ]}
+            />
+            <ServiceCard
+              icon={Home}
+              title="Paket Family"
+              description="Ideal untuk keluarga dengan multiple devices"
+              speed="50 Mbps"
+              price="Rp 350.000"
+              features={[
+                "Kecepatan hingga 50 Mbps",
+                "Unlimited kuota",
+                "WiFi router dual band",
+                "Support 24/7",
+                "Free instalasi",
+                "1 IP Publik (opsional)",
+              ]}
+            />
+            <ServiceCard
+              icon={Home}
+              title="Paket Ultimate"
+              description="Untuk gaming dan streaming 4K"
+              speed="100 Mbps"
+              price="Rp 500.000"
+              features={[
+                "Kecepatan hingga 100 Mbps",
+                "Unlimited kuota",
+                "WiFi router mesh",
+                "Priority support",
+                "Free instalasi",
+                "1 IP Publik gratis",
+              ]}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Business Internet Packages */}
+      <section className="py-20 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Paket Internet Bisnis</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Dedicated line dengan SLA tinggi untuk operasional bisnis
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <ServiceCard
+              icon={Building2}
+              title="Business Lite"
+              description="Untuk usaha kecil dan startup"
+              speed="100 Mbps"
+              price="Rp 3.500.000"
+              features={[
+                "Internet Bisnis / Dedicated",
+                "Dedicated line 100 Mbps",
+                "Jaminan Uptime / SLA 99.5%",
+                "5 IP Publik",
+                "Priority support",
+                "Bandwidth garanteed 1:1",
+              ]}
+            />
+            <ServiceCard
+              icon={Building2}
+              title="Business Pro"
+              description="Solusi untuk perusahaan menengah"
+              speed="500 Mbps"
+              price="Rp 10.500.000"
+              features={[
+                "Internet Bisnis / Dedicated",
+                "Dedicated line 500 Mbps",
+                "Jaminan Uptime / SLA 99.5%",
+                "10 IP Publik",
+                "24/7 dedicated support",
+                "Bandwidth garanteed 1:1",
+                "Free monitoring tools",
+              ]}
+            />
+            <ServiceCard
+              icon={Building2}
+              title="Business Enterprise"
+              description="Untuk perusahaan besar dan enterprise"
+              speed="1 Gbps"
+              price="Pesan Sekarang"
+              features={[
+                "Internet Bisnis / Dedicated",
+                "Dedicated line up to 1 Gbps",
+                "Jaminan Uptime / SLA 99.5%",
+                "Custom IP allocation",
+                "Dedicated account manager",
+                "Bandwidth garanteed 1:1",
+                "Custom solutions",
+              ]}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Services */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Layanan Tambahan</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Solusi lengkap untuk kebutuhan digital Anda
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-gradient-card p-8 rounded-xl border border-border hover:border-primary transition-all duration-300 hover:shadow-lg group">
+              <div className="mb-4 p-4 bg-gradient-primary rounded-lg w-fit group-hover:shadow-glow transition-all duration-300">
+                <Globe className="h-8 w-8 text-primary-foreground" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3">IP Publik</h3>
+              <p className="text-muted-foreground mb-4">
+                Static IP untuk akses remote, CCTV online, dan server hosting
+              </p>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <div className="min-w-1.5 h-1.5 rounded-full bg-primary mt-2" />
+                  <span>Static IP dedicated</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="min-w-1.5 h-1.5 rounded-full bg-primary mt-2" />
+                  <span>Full access & control</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="min-w-1.5 h-1.5 rounded-full bg-primary mt-2" />
+                  <span>Mulai dari Rp 100.000/bulan</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-card p-8 rounded-xl border border-border hover:border-primary transition-all duration-300 hover:shadow-lg group">
+              <div className="mb-4 p-4 bg-gradient-primary rounded-lg w-fit group-hover:shadow-glow transition-all duration-300">
+                <Server className="h-8 w-8 text-primary-foreground" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3">Cloud Hosting</h3>
+              <p className="text-muted-foreground mb-4">
+                Web hosting dengan performa tinggi dan reliability maksimal
+              </p>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <div className="min-w-1.5 h-1.5 rounded-full bg-primary mt-2" />
+                  <span>99.9% uptime guarantee</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="min-w-1.5 h-1.5 rounded-full bg-primary mt-2" />
+                  <span>SSD storage</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="min-w-1.5 h-1.5 rounded-full bg-primary mt-2" />
+                  <span>Free SSL certificate</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-card p-8 rounded-xl border border-border hover:border-primary transition-all duration-300 hover:shadow-lg group">
+              <div className="mb-4 p-4 bg-gradient-primary rounded-lg w-fit group-hover:shadow-glow transition-all duration-300">
+                <Shield className="h-8 w-8 text-primary-foreground" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3">CCTV Cloud</h3>
+              <p className="text-muted-foreground mb-4">
+                Solusi monitoring CCTV dengan cloud storage dan akses remote
+              </p>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <div className="min-w-1.5 h-1.5 rounded-full bg-primary mt-2" />
+                  <span>Cloud recording & playback</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="min-w-1.5 h-1.5 rounded-full bg-primary mt-2" />
+                  <span>Mobile app access</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="min-w-1.5 h-1.5 rounded-full bg-primary mt-2" />
+                  <span>Motion detection alerts</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Our Service */}
+      <section className="py-20 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Keunggulan Layanan Kami</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Mengapa pelanggan memilih Metronet untuk kebutuhan internet mereka
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {[
+              {
+                icon: Zap,
+                title: "Teknologi Fiber Optik Terbaru",
+                description: "Menggunakan infrastruktur fiber optik generasi terbaru untuk kecepatan maksimal dan latensi rendah.",
+              },
+              {
+                icon: Shield,
+                title: "Jaminan Uptime 99.9%",
+                description: "Sistem redundansi dan monitoring 24/7 memastikan koneksi internet Anda selalu stabil.",
+              },
+              {
+                icon: Headphones,
+                title: "Customer Support Responsif",
+                description: "Tim support kami siap membantu via telepon, WhatsApp, atau email kapan saja Anda membutuhkan.",
+              },
+              {
+                icon: Server,
+                title: "Instalasi Profesional Gratis",
+                description: "Teknisi bersertifikat akan melakukan instalasi dengan rapi dan profesional tanpa biaya tambahan.",
+              },
+            ].map((benefit, index) => (
+              <div
+                key={index}
+                className="bg-card p-6 rounded-xl border border-border hover:border-primary transition-all duration-300 hover:shadow-lg group flex gap-4"
+              >
+                <div className="p-3 bg-gradient-primary rounded-lg h-fit group-hover:shadow-glow transition-all duration-300">
+                  <benefit.icon className="h-6 w-6 text-primary-foreground" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
+                  <p className="text-muted-foreground text-sm">{benefit.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Pertanyaan Umum</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Jawaban untuk pertanyaan yang sering ditanyakan tentang layanan kami
+            </p>
+          </div>
+          <div className="max-w-3xl mx-auto space-y-4">
+            {[
+              {
+                question: "Berapa lama proses instalasi?",
+                answer: "Proses instalasi biasanya memakan waktu 2-4 jam tergantung kondisi lokasi. Tim kami akan menghubungi Anda untuk konfirmasi jadwal instalasi.",
+              },
+              {
+                question: "Apakah ada biaya instalasi?",
+                answer: "Untuk semua paket internet rumah, instalasi GRATIS. Untuk paket bisnis, biaya instalasi akan disesuaikan dengan kebutuhan infrastruktur.",
+              },
+              {
+                question: "Bagaimana cara upgrade paket?",
+                answer: "Anda bisa upgrade paket kapan saja melalui customer service kami. Perubahan akan berlaku di billing period berikutnya.",
+              },
+              {
+                question: "Apakah ada kontrak minimal?",
+                answer: "Paket rumah tidak ada kontrak minimal. Paket bisnis memiliki kontrak minimal 12 bulan dengan benefit harga lebih kompetitif.",
+              },
+            ].map((faq, index) => (
+              <div
+                key={index}
+                className="bg-gradient-card p-6 rounded-xl border border-border hover:border-primary transition-all duration-300"
+              >
+                <h3 className="text-lg font-bold mb-2">{faq.question}</h3>
+                <p className="text-muted-foreground">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Support Section */}
+      <section className="py-20 bg-gradient-hero">
+        <div className="container mx-auto px-4 text-center">
+          <div className="mb-6 p-4 bg-primary-foreground/10 rounded-full w-fit mx-auto">
+            <Headphones className="h-12 w-12 text-primary-foreground" />
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+            Dukungan Pelanggan 24/7
+          </h2>
+          <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+            Tim teknis kami siap membantu Anda kapan saja untuk memastikan koneksi internet Anda
+            selalu optimal
+          </p>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Services;
