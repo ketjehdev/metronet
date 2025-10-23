@@ -51,7 +51,15 @@ const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link to="/contact">
-              <Button variant="hero" size="default">
+              <Button 
+                variant="hero" 
+                size="default"
+                onClick={() => {  
+                    const phone = "6285277142741";
+                    const message = `Halo, saya memiliki pertanyaan tentang layanan Metronet.`;
+                    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+                    window.open(url, "_blank");
+                  }}>
                 Hubungi Kami
               </Button>
             </Link>
